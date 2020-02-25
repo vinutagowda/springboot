@@ -1,0 +1,38 @@
+<h1>{{isNew?"New ":"Edit "}} Employee</h1>
+<form (ngSubmit)="save()">
+
+    <div>
+        <label>First Name</label>
+        <input type="text" name="fnm" [(ngModel)]="emp.firstName"/>
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="lnm" [(ngModel)]="emp.lastName"/>
+    </div>
+    <div>
+        <label>Join Date</label>
+        <input type="date" name="jod" [(ngModel)]="emp.joinDateStr"/>
+    </div>
+
+    <div>
+        <label>Basic</label>
+        <input type="number" name="basic" [(ngModel)]="emp.basic"/>
+    </div>
+    <div>
+        <label>Mobile Number</label>
+        <input type="text" name="mno" [(ngModel)]="emp.mobileNumber"/>
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" name="mail" [(ngModel)]="emp.email"/>
+    </div>
+    <div>
+        <label>MDepartment</label>
+        <input type="text" name="deptm" [(ngModel)]="emp.dept"/>
+    </div>
+    <div>
+        
+        <button (click)="ngSubmit">save</button>
+    </div>
+
+</form>
